@@ -248,6 +248,9 @@ What the engine changes next to NVIDIA's code:
 
 ## Credits and licenses
 
+Goyaah is by Raheel Siddiqui: [X](https://x.com/rawheeel),
+[LinkedIn](https://www.linkedin.com/in/rawheel/), [GitHub](https://github.com/rawheel).
+
 Code: MIT, see [LICENSE](LICENSE). Built on Kyutai's moshi_mlx and NVIDIA's PersonaPlex
 code (both MIT). Model weights: NVIDIA Open Model License, not in this repo; the converted
 copy on Hugging Face ships with the license and notice. See [NOTICE.md](NOTICE.md).
