@@ -1,0 +1,34 @@
+[project]
+name = "goyaah"
+version = "0.1.0"
+description = "Goyaah: an open-source full-duplex speech-to-speech voice model on Apple Silicon (NVIDIA PersonaPlex, 4-bit MLX)"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "MIT" }
+dependencies = [
+    "mlx>=0.26",
+    "numpy>=2.1,<2.3",
+    "safetensors>=0.4",
+    "huggingface-hub>=0.24",
+    "rustymimi==0.4.1",
+    "sphn>=0.2,<0.3",
+    "sentencepiece>=0.2",
+    "aiohttp>=3.10",
+    "faster-whisper>=1.1",
+]
+
+[project.scripts]
+goyaah-download = "goyaah.download:main"
+goyaah-convert = "goyaah.convert:main"
+goyaah-serve = "goyaah.server:main"
+goyaah-bench = "goyaah.bench:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["goyaah*"]
+
+[tool.setuptools.package-data]
+goyaah = ["web/*", "data/*.json"]
